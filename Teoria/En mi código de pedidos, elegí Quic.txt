@@ -1,0 +1,5 @@
+En mi código de pedidos, elegí QuickSort después de analizar ambos algoritmos. La razón principal es que mis datos son números de pedido que suelen llegar de forma aleatoria y desordenada. QuickSort maneja mucho mejor esta aleatoriedad porque divide el problema en partes más pequeñas usando un pivote, y luego ordena recursivamente cada parte.
+
+Aunque ShellSort es interesante por sus saltos entre elementos, he visto que es menos eficiente cuando los datos no tienen un patrón predecible. En cambio, QuickSort se adapta perfectamente a la naturaleza impredecible de los pedidos, y además escala mejor si en el futuro tengo que manejar miles de pedidos.
+
+Para mi caso específico, donde el rendimiento promedio es lo más importante y los datos son generalmente desordenados, QuickSort ofrece una combinación de eficiencia y simplicidad que lo hace la mejor opción. ShellSort lo reservaría para casos donde los datos ya están parcialmente ordenados o para conjuntos muy pequeños, pero ese no es el escenario típico en mi sistema de pedidos.

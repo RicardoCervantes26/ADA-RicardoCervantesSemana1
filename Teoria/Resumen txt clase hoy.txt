@@ -1,0 +1,19 @@
+Divide y Vencerás en ordenación
+
+El divide y Vencerás consiste que de un super problema lo divides en pequeños que son más fáciles de solucionar que el super problema tiene 3 pasos: dividir (dividir el problema en sus problemas), vencer (se resuelven los subproblemas), combinar (la soluciones se combinan)
+
+-Shell sort:
+
+Es una mejora del ordenamiento por inserción porque permite ordenar elementos lejanos entonces mientras más pequeña se haga la lista este es más eficiente pero se usa en casos específicos.
+
+Su notación Big o en la complejidad temporal es O(n^2) y en su complejidad espacial es O(1).
+
+-Quick Sort:
+
+Es uno de los algoritmos más rápidos porque se basa en escoger un pivote donde todos los elementos se reorganizan en base a este pivote a la izquierda los menores y a la derecha los mayores (se aplica recursividad).
+
+En el mejor caso O(nlogn).
+
+Pero caso O(n^2).
+
+Casi promedio O(nlogn)
