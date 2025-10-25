@@ -1,0 +1,63 @@
+import java.util.*;
+
+public class QuickSort {
+
+    public static void quickSort(int[] arr) {
+        if (arr.length <= 1) return;
+        
+        // Convertir a lista para manejar dinámicamente los elementos
+        List<Integer> list = new ArrayList<>();
+        for (int num : arr) list.add(num);
+        
+        // Llamar al método recursivo
+        List<Integer> sorted = quickSortRecursive(list);
+        
+        // Convertir de vuelta al array original
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sorted.get(i);
+        }
+    }
+
+    private static List<Integer> quickSortRecursive(List<Integer> list) {
+        if (list.size() <= 1) return list;
+
+        // Elegir pivote (en este caso el primer elemento)
+        int pivot = list.get(0);
+
+        // Crear listas para menores, iguales y mayores
+        List<Integer> less = new ArrayList<>();
+        List<Integer> equal = new ArrayList<>();
+        List<Integer> greater = new ArrayList<>();
+
+        // Particionar los elementos
+        for (int num : list) {
+            if (num < pivot) less.add(num);
+            else if (num == pivot) equal.add(num);
+            else greater.add(num);
+        }
+
+        // Llamadas recursivas y concatenar
+        return concatenate(quickSortRecursive(less), equal, quickSortRecursive(greater));
+    }
+
+    private static List<Integer> concatenate(List<Integer> a, List<Integer> b, List<Integer> c) {
+        List<Integer> result = new ArrayList<>();
+        result.addAll(a);
+        result.addAll(b);
+        result.addAll(c);
+        return result;
+    }
+
+    // Método para probar el funcionamiento
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90, 5};
+        
+        System.out.println("Array original:");
+        System.out.println(Arrays.toString(arr));
+        
+        quickSort(arr);
+        
+        System.out.println("Array ordenado:");
+        System.out.println(Arrays.toString(arr));
+    }
+}
