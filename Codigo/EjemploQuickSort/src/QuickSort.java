@@ -1,7 +1,6 @@
 import java.util.*;
 public class QuickSort {
 
-    // Metodo principal que ordena directamente una Lista
     public static void QuicksortEjemplo(List<Integer> lista) {
         // Si la lista es muy pequeña, ya está ordenada
         if (lista.size() <= 1) return;
@@ -77,4 +76,5 @@ public class QuickSort {
         System.out.println("Más pedidos ordenados:");
         System.out.println(masPedidos);
     }
+
 }
